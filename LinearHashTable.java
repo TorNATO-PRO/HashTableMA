@@ -134,7 +134,7 @@ class LinearHashTable<K, V> extends HashTableBase<K, V> {
         HashItem<K, V> slot = _items.elementAt(hash);
 
         int step = 0;
-        while (!slot.isEmpty() && step != size()) {
+        while (!slot.isTrueEmpty() && step != size()) {
             if (slot.getKey() == key) {
                 return true;
             }
